@@ -1,0 +1,1092 @@
+/* ---------- ICONS BOOTSTRAP ---------- */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+/* ---------- FONTS ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+/* ---------- ROOT ---------- */
+:root {
+  background-color: var(--bgcolor); /* Cor do fundo de todo o site */
+  --navbgcolor: #202020; /* Cor de fundo da navbar */
+  --maincolor: #ffc60a; /* Cor principal (amarelo) */
+  --bgcolor: #282828; /* Cor do fundo */
+  --cinza0: #222; /* Cinza muito escuro */
+  --cinza1: #333; /* Cinza escuro */
+  --cinza2: #444; /* Cinza médio escuro */
+  --cinza3: #666; /* Cinza médio claro */
+  --cinza4: #999; /* Cinza claro */
+  --cinza5: #ccc; /* Cinza muito claro */
+  --font: "Rajdhani", sans-serif; /* Font utilizada em todo o projecto */
+}
+
+/* ---------- BODY ---------- */
+
+body {
+  background-color: var(--bgcolor) !important; /* Cor de fundo para o elemento body, com override */
+}
+
+/* ---------- BARRA DE SCROLL ---------- */
+
+/* Barra de scroll */
+::-webkit-scrollbar {
+  width: 16px; /* Largura */
+}
+
+/* Barra de fundo ("carril") */
+::-webkit-scrollbar-track {
+  background: var(--cinza1); /* Cor do fundo */
+}
+
+/* Barra pequena */
+::-webkit-scrollbar-thumb {
+  background: var(--cinza2); /* Cor do fundo */
+  border-radius: 4px; /* Cantos arredondados */
+}
+
+/* Barra em hover (com o cursor por cima) */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cinza3); /* Cor do fundo */
+}
+
+/* ---------- SEPARADORES ---------- */
+
+/* Estilo dos hr (separadores horizontais) */
+.separator {
+  color: var(--cinza4); /* Cor */
+  margin: 64px 25% 64px 25%; /* Margens em cima e em baixo */
+}
+
+
+.header-style {
+  position: fixed; /* Posição fixa */
+  top: 0; /* Posição em relação ao topo */
+  z-index: 9999; /* Coloca o header por cima de todos os outros elementos */
+  width: 100%; /* Largura */
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+  background-color: var(--navbgcolor); /* Cor do fundo da navbar */
+}
+
+.navbar a {
+  color: var(--maincolor); /* Cor dos links */
+}
+
+/* Logótipo */
+.navbar-brand img {
+  height: 16px; /* Altura */
+  margin: 32px; /* Margem */
+}
+
+ /* Media query para a imagem */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    margin: 0px; /* Retira a margem para que a navbar ocupe menos altura */
+  }
+}
+
+/* Links */
+.nav-link {
+  color: var(--maincolor); /* Cor do link */
+  border-radius: 4px; /* Cantos arredondados */
+}
+
+/* Ícone do menu (burger) */
+button.navbar-toggler,
+button.navbar-toggler:active,
+button.navbar-toggler:focus {
+  box-shadow: none; /* Sombra */
+  border: none; /* Borda */
+}
+
+ /* Media query para a navbar */
+@media (min-width: 992px) { /* Largura mínima */
+  .navbar-expand-lg .navbar-collapse {
+    flex-direction: row-reverse;
+  }
+}
+
+ /* Media query para os elementos do menu */
+@media (max-width: 991px) { /* Largura máxima */
+  .nav-item {
+    text-align: center; /* Alinhamento ao centro */
+    padding: 6px; /* Espaçamento entre os elementos do menu */
+  }
+}
+
+ /* Elementos do menu */
+.nav-item {
+  margin-right: 0px;  /* Margem à direita */
+  font-family: var(--font);  /* Cor */
+  font-weight: 600;  /* Espessura do texto */
+  font-size: 12px;  /* Tamanho da fonte */
+  text-transform: uppercase;  /* Apresentar o texto em maiúsculas */
+}
+
+/* Elementos em hover (com o cursor por cima) */
+.nav-item a:hover {
+  background-color: var(--maincolor);  /* Cor do fundo */
+  color: var(--bgcolor);  /* Cor */
+  transition-duration: 1s;  /* Duração do efeito de trasição */
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  position: fixed; /* Posição fixa */
+  bottom: 0; /* Posição em relação ao topo */
+  z-index: 9999; /* Coloca o footer por cima de todos os outros elementos */
+  width: 100%; /* Largura */
+  background-color: var(--navbgcolor);  /* Cor do fundo */
+  padding: 16px;  /* Espécie de "margem interior" do elemento, para dar espaço em redor do conteúdo */
+}
+
+.copyright {
+  float: left; /* Elemento coloca-se à esquerda */
+  color: var(--cinza3); /* Cor */
+  margin-left: 10%; /* Margem à esquerda */
+  margin-top: 12px; /* Margem por cima */
+  font-family: var(--font); /* Cor */
+  font-size: 13px; /* Tamanho do texto */
+}
+
+ /* Media query para o elemento copyright em dispositivos com ecrã até 768px */
+@media only screen and (max-width: 768px) {
+  .copyright {
+    float: none; /* Retira o float à esquerda que se pretende em dispositivos maiores */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-left: 0%; /* Retira a margem à esquerda */
+    margin-top: 0px; /* Retira a margem por cima */
+  }
+}
+
+.social {
+  margin-right: 10%;  /* Margem à direita */
+  color: var(--cinza5);  /* Cor */
+  float: right;  /* Elemento coloca-se à direita */
+  padding: 8px;  /* Espécie de "margem interior" do elemento, para dar espaço em redor do conteúdo */
+}
+
+ /* Media query para o elemento social em dispositivos com ecrã até 768px */
+@media only screen and (max-width: 768px) {
+  .social {
+    text-align: center; /* Alinha o texto ao centro */
+    float: none; /* Retira o float à direita que se pretende em dispositivos maiores */
+    margin-right: 0%; /* Retira a margem à direita */
+  }
+}
+
+/* Links */
+.social a {
+  color: var(--cinza5); /* Cor */
+  float: right; /* Elemento coloca-se à direita */
+}
+
+ /* Media query para o elemento social em dispositivos com ecrã até 768px */
+@media only screen and (max-width: 768px) {
+  .social a {
+    float: none; /* Retira o float à direita que se pretende em dispositivos maiores */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+}
+
+/* Comportamento dos links em hover (com o cursor por cima) */
+.social a:hover {
+  color: var(--maincolor); /* Cor */
+  -ms-transform: scale(1.5); /* Tamanho do efeito de transição */
+  -webkit-transform: scale(1.5); /* Tamanho do efeito de transição */
+  transform: scale(1.5); /* Tamanho do efeito de transição */
+  transition-duration: 1s; /* Duração do efeito de transição */
+}
+
+/* Ícones */
+.social i {
+  margin-left: 16px; /* Margem à esquerda */
+  margin-right: 16px; /* Margem à direita */
+}
+
+/* ---------- ALL PAGES ---------- */
+
+.page {
+  /* O conjunto das duas linhas abaixo permitem manter o conteúdo centrado */
+  margin-left: auto; /* Margem esquerda automática */
+  margin-right: auto; /* Margem direita automática */
+  width: 90%; /* Percentagem de largura que as páginas vão assumir */
+  max-width: 1200px; /* Largura das páginas limitada a este valor */
+  background-color: var(--bgcolor); /* Cor do fundo */
+  margin-top: 128px; /* Margem superior */
+  margin-bottom: 128px; /* Margem inferior */
+  animation: content-reveal; /* Animação */
+  animation-duration: 3s; /* Duração da animação */
+  animation-timing-function: ease; /* Timing da animação */
+}
+
+ /* Media query para os elementos page em ecrãs até 768 px */
+ @media only screen and (max-width: 768px) {
+  .page {
+    margin-top: 96px; /* Margem superior mais pequena */
+  }
+}
+
+/* Animação para o conteúdo das páginas */
+@keyframes content-reveal {
+  from {  /* Animação vai desde */
+    opacity: 0; /* Opacidade mínima (não se vê o conteúdo) */
+  }
+
+  to { /* Animação vai até */
+    opacity: 1; /* Opacidade máxima (vê-se totalmente o conteúdo) */
+  }
+}
+
+/* ---------- TÍTULOS ---------- */
+
+.title {
+  margin-bottom: 64px; /* Margem inferior */
+  text-align: center; /* Alinhamento ao centro */
+  color: var(--maincolor); /* Cor */
+  font-family: var(--font);  /* Font */
+  font-weight: 600; /* Espessura da font */
+  font-size: 36px; /* Tamanho do texto */
+  text-decoration: underline; /* Decoração do texto */
+  text-decoration-thickness: 4px; /* Espessura da decoração */
+  text-underline-offset: 24px; /* Afastamento da decoração do texto */
+}
+
+ /* Media query para os títulos em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .title {
+    margin-bottom: 48px; /* Margem inferior mais pequena */
+    font-size: 24px; /* O tamanho do texto é menor */
+  }
+}
+
+/* ---------- TEXTO ---------- */
+
+ /* Texto normal */
+.text-normal {
+  text-align: left; /* Texto alinhado à esquerda */
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 16px; /* Tamanho do texto */
+  line-height: 200%; /* Altura da linha */
+}
+ /* Links no texto normal */
+.text-normal a {
+  color: var(--maincolor); /* Cor */
+  text-decoration: none; /* Decoração do texto */
+  font-weight: 600; /* Espessura do texto */
+}
+
+ /* Texto normal em hover (com o cursor por cima) */
+.text-normal a:hover {
+  background-color: var(--maincolor); /* Cor */
+  color: var(--bgcolor); /* Cor */
+  transition-duration: 1s; /* Duração da transição */
+}
+
+ /* Texto pequeno */
+.text-small {
+  text-align: left; /* Texto alinhado à esquerda */
+  color: var(--cinza3); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 13px; /* Tamanho do texto */
+  line-height: 200%; /* Altura da linha */
+}
+
+ /* Texto grande  */
+.text-big {
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 24px; /* Tamanho do texto */
+  line-height: 200%; /* Altura da linha */
+}
+
+ /* Media query para o texto grande em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .text-big {
+    font-size: 20px; /* Tamanho do texto */
+  }
+}
+
+/* ---------- HOME ---------- */
+
+ /* Imagem panorâmica na página inicial */
+.panorama iframe {
+  height: 99vh; /* Foi necessário baixar de 100 para 99 para controlar o scroll, overflow hidden não estava a resultar */
+  width: 100%; /* Largura */
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+  column-count: 2; /* Número de colunas */
+  column-gap: 15%; /* Espaçamento entre colunas */
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: var(--cinza2);
+}
+
+ /* Media query para as colunas, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .about {
+      column-count: 1; /* Em ecrãs até 768 px, texto tem apenas 1 coluna */
+  }
+}
+
+ /* Primeira letra de cada parágrafo */
+.about p::first-letter {
+  font-size: 150%;  /* Tamanho da fonte maior */
+  font-weight: 400;  /* Espessura do texto */
+}
+
+/* ---------- MEMBERS ---------- */
+
+ /* Card */
+.member-card {
+  margin: 5%; /* Margem */
+  background-color: var(--cinza1); /* Cor do fundo */
+  padding: 16px;  /* Espaçamento em redor do elemento */
+  border-radius: 8px;  /* Cantos arredondados */
+}
+
+ /* Fotografia */
+.member-photo {
+  width: 100%;  /* Largura */
+  border-radius: 50%; /* Arredonda a imagem até formar um círculo */
+}
+
+ /* Corpo do card */
+.member-body {
+  margin-top: 32px; /* Margem superior */
+}
+
+ /* Cell do ícone do instrumento */
+.instrument-icon-td {
+  vertical-align: middle; /* Alinhamento vertical */
+  border-right: 2px; /* Borda à direita */
+  border-style: dotted;  /* Linha da borda em pontos */
+  border-color: var(--cinza3);  /* Cor */
+}
+
+ /* Ícone do instrumento */
+.instrument-icon {
+  background-color: var(--maincolor); /* Cor do fundo */
+  height: 48px;  /* Altura */
+  border-radius: 50%;  /* Elemento em formato de círculo */
+  padding: 8px; /* Espaçamento em redor do elemento */
+}
+
+ /* Texto do nome do instrumento */
+.member-instrument {
+  color: var(--maincolor);  /* Cor */
+  font-family: var(--font);  /* Font */
+  font-weight: 600;  /* Espessura do texto */
+  font-size: 13px;  /* Tamanho do texto */
+  text-align: left;  /* Alinhamento à esquerda */
+  text-transform: uppercase;  /* Texto convertido para maiúsculas */
+}
+
+ /* Media query para o nome do instrumento, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .member-instrument {
+    margin-left: 16px; /* Em devices com ecrã mais pequeno, tem margem à esquerda */
+  }
+}
+ /* Texto do nome do músico */
+.member-name {
+  text-align: left; /* Alinhamento à esquerda */
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 400;  /* Espessura do texto */
+  font-size: 13px; /* Tamanho do texto */
+}
+
+ /* Media query para o nome do músico, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .member-name {
+    margin-left: 16px; /* Em devices com ecrã mais pequeno, tem margem à esquerda */
+  }
+}
+
+/* ---------- MUSIC ---------- */
+
+ /* Playlist embutida do Spotify */
+.playlist { 
+  height: 3425px; /* Altura ajustada para aparecer toda a playlist sem scroll próprio */
+  width: 100%; /* Largura */
+}
+
+ /* Media query para a playlist, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .playlist {
+    height: 3540px; /* Em versão mobile precisei de aumentar um pouco a altura porque tinha scroll nas últimas duas faixas */
+  }
+}
+
+/* ---------- DISCOGRAPHY ---------- */
+
+ /* Ícone de disco a rodar */
+.release-icon {
+  color:var(--maincolor); /* Cor */
+  margin-bottom: 24px; /* Margem inferior */
+}
+
+ /* Título do lançamento */
+.discography-release-name {
+  text-align: center; /* Texto centrado */
+  color: var(--maincolor);  /* Cor */
+  font-family: var(--font);  /* Fonte */
+  font-weight: 600;  /* Espessura do texto */
+  font-size: 16px; /* Tamanho do texto */
+  text-transform: uppercase; /* Texto convertido para maiúsculas */
+  letter-spacing: 2px;  /* Espaçamento entre as letras */
+  margin-bottom: 32px;  /* Margem inferior */
+}
+
+/* Container da informação do lançamento */
+.discography > .row {
+  text-align: left; /* texto alinhado à esquerda */
+  background-color: var(--cinza1);  /* Cor */
+  border-radius: 8px;  /* Cantos arredondados */
+  padding: 32px;  /* Espaçamento */
+}
+
+/* Capa do lançamento (coluna 1) */
+.discography-cover {
+  text-align: left; /* Texto alinhado à esquerda */
+}
+
+/* Cover image */
+.discography-cover img {
+  max-width: 300px; /* Largura máxima */
+  max-height: 300px;  /* Altura máxima */
+  border-radius: 8px; /* Cantos arredondados */
+}
+
+ /* Media query para as capas, em ecrãs entre 768 px e 1200px */
+ @media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .discography-cover img {
+   margin-bottom: 24px; /* Margem inferior */
+  }
+}
+
+ /* Media query para a capa, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .discography-cover img {
+    text-align: center; /* Alinhado ao centro */
+    margin-bottom: 32px;  /* Margem inferior */
+  }
+}
+
+ /* Media query para os títulos, em ecrãs até 1200 px */
+ @media only screen and (min-width: 1200px) {
+  /* Detalhes do lançamento (coluna 2) */
+.discography-info {
+   margin-left: 64px; /* Margem à esquerda */
+  }
+}
+
+ /* Media query para os títulos, em ecrãs até 768 px */
+ @media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .release-section-title {
+   margin-top: 24px; /* Margem superior */
+  }
+}
+
+/* Detalhes do lançamento (coluna 2) */
+.discography-info {
+text-align: left; /* Texto alinhado á esquerda */
+}
+
+.release-section-title {
+  color: var(--maincolor); /* Cor */
+  font-family: var(--font);  /* Font */
+  font-weight: 600; /* Espessura do texto */
+  font-size: 14px;  /* Tamanho do texto */
+  text-transform: uppercase;  /* Texto convertido para maiúsculas */
+}
+
+ /* Media query para os títulos, em ecrãs até 768 px */
+@media only screen and (max-width: 768px) {
+  .release-section-title {
+    margin-top: 32px; /* Espaçamento entre as "colunas" (em mobile) */
+  }
+}
+
+ /* Títulos dos Details (type, release date, duration, producer, studio, label) */
+.release-info-title {
+  color: var(--maincolor); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 12px; /* Tamanho do texto */
+  text-transform: uppercase; /* Texto convertido para maiúsculas */
+}
+
+/* Texto Details */
+.release-info-text {
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 400; /* Espessura do texto */
+  font-size: 14px; /* Tamanho do texto */
+}
+
+/* Alinhamento de músicas (coluna 3) */
+.discography-tracklist ol > li {
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 400; /* Espessura do texto */
+  font-size: 14px; /* Tamanho do texto */
+  line-height: 250%; /* Altura da linha */
+}
+
+ /* Elementos da lista ordenada */
+.discography-tracklist ol {
+  margin-left: -16px; /* Margem à esquerda (corrige o alinhamento) */
+}
+
+ /* Texto Duração */
+.duration {
+  color: var(--cinza3); /* Cor */
+  font-weight: 400; /* Espessura do texto */
+  font-size: 13px; /* Tamanho do texto */
+}
+
+/* Crítica do lançamento (coluna 4) */
+.discography-review {
+  text-align: left; /* texto alinhado à esquerda */
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 400; /* Espessura do texto */
+  font-size: 14px; /* Tamanho do texto */
+  line-height: 200%; /* Altura da linha */
+}
+
+/* Ligações (Apple Music, Spotify, Buy) */
+.discography-links {
+  text-align: center; /* Alinhamento ao centro */
+  margin-left: -16px; /* Margem à esquerda compensa o espaçamento */
+}
+
+ /* Ícones */
+.discography-links i {
+  margin-top: 16px; /* Margem para cima */
+  margin-left: 16px; /* Margem entre elementos */
+  margin-right: 4px; /* Margem entre ícone e texto */
+  color: var(--cinza5); /* Cor */
+}
+
+ /* Texto à direita dos ícones */
+.discography-icons-text {
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 13px; /* Tamanho do texto */
+  text-transform: uppercase; /* Texto convertido para maiúsculas */
+}
+
+ /* Links do texto */
+.discography-links a {
+  color: var(--cinza5); /* Cor */
+  text-decoration: none; /* Decoração do texto (nenhuma, sem sublinhado) */
+}
+
+ /* Comportamento em hover (com o cursor por cima) */
+.discography-links a:hover .discography-icons-text {
+  color: var(--maincolor); /* Cor */
+  transition-duration: 1s; /* Duração do efeito de transição */
+}
+
+/* ---------- NEWS ---------- */
+
+/* CONJUNTO DE TODOS OS CARDS */
+.news-article-card {
+  font-family: var(--font);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+ /* CADA CARD (COMPLETO) */
+.card {
+  background-color: var(--bgcolor) !important;
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  border-radius: 16px !important;
+  border: 20px;
+  border-color: var(--bgcolor) !important;
+  background-color: var(--cinza1);
+}
+
+ /* Imagem de ilustração da notícia */
+.card_header img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+ /* Corpo da notícia */
+.card_body {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--cinza1);
+  color: var(--cinza5);
+}
+
+ /* Etiquetas de tipo de notícia */
+.tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 12px;
+}
+
+.tag + .tag {
+  margin-left: 0.5em;
+}
+
+.news-tag {
+  background: var(--maincolor);
+  color: var(--bgcolor);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+ /* Título da notícia */
+.card_body h4 {
+  font-size: 24px;
+}
+
+ /* RODAPÉ DO CARD */
+
+.card_footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: var(--cinza1);
+  border-top: 1px dotted var(--maincolor);
+}
+
+ /* Autor */
+.user {
+  color: var(--maincolor);
+  display: flex;
+  gap: 0.5rem;
+}
+
+ /* Imagem do autor */
+.user_image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+ /* Informação do autor */
+.user_info {
+  margin-left: 24px;
+}
+
+ /* Nome do autor */
+.article_autor {
+  color: var(--maincolor);
+  font-size: 13px;
+}
+
+ /* Data da notícia */
+.article_date {
+  color: var(--cinza4);
+  font-size: 13px;
+}
+
+ /* BOTÃO SHARE */
+
+.share {
+  text-align: right;
+}
+
+.share a {
+  color: var(--cinza3);
+}
+
+ /* Comportamento com o cursor por cima */
+.share a:hover {
+  color: var(--maincolor);
+  transition-duration: 1s;
+}
+
+/* ---------- CONCERTS ---------- */
+
+ /* Tabela */
+table {
+  width: 100%; /* Largura */
+}
+
+ /* Elementos th (cabeçalho) e td (dados) */
+th,
+td {
+  padding: 32px 24px; /* Espaçamento */
+}
+
+ /* Media query para os elementos th e td em ecrãs até 768px */
+@media only screen and (max-width: 768px) {
+  th,
+  td {
+    padding: 8px 8px; /* Espaçamento para os elementos th e td */
+  }
+}
+
+ /* Estilo para cada linha par da tabela */
+.concert-list tr:nth-child(even) {
+  background-color: var(--cinza0); /* Cor do fundo */
+}
+
+ /* Cabeçalho da tabela */
+.table-header {
+  text-align: center; /* Alinhado ao centro */
+  color: var(--maincolor); /* Cor do texto */
+  font-family: var(--font); /* Font */
+  font-weight: 400; /* Espessura do texto */
+  font-size: 14px; /* Tamanho do texto */
+  text-transform: uppercase; /* Texto convertido para maiúsculas */
+}
+
+ /* Texto da tabela */
+.table-text {
+  text-align: center; /* Alinhamento ao centro */
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 16px; /* Tamanho do texto */
+}
+
+ /* Media query para o texto da tabela em ecrãs até 768px */
+@media only screen and (max-width: 768px) {
+  .table-text {
+    font-size: 14px; /* Tamanho do texto inferior */
+  }
+}
+
+ /* Textos "sold out" e "available soon" */
+.sold-out, .available-soon {
+  text-transform: uppercase; /* Texto convertido para maiúsculas */
+  font-size: 12px; /* Tamanho do texto */
+  font-weight: 600; /* Espessura do texto */
+}
+
+ /* Texto "sold out" */
+.sold-out {
+  color: #c00000; /* Cor: vermelho */
+}
+
+ /* Texto "available soon" */
+.available-soon {
+  color: #00c08a; /* Cor: verde */
+}
+
+ /* Botão de compra de bilhetes */
+.buy {
+  background-color: var(--cinza3); /* Cor do fundo */
+  border: none; /* Sem borda */
+  color: var(--bgcolor); /* Cor */
+  padding: 12px 32px; /* Espaçamento */
+  border-radius: 0px 4px 4px 0px; /* Cantos arredondados só à direita */
+  border-left: 2px dotted var(--bgcolor); /* Border da esquerda em efeito picotado */
+  font-family: var(--font); /* Font */
+  font-weight: 600; /* Espessura do texto */
+  text-align: center; /* Texto alinhado ao centro */
+  font-size: 16px; /* Tamanho do texto */
+}
+
+ /* Media query para o botão de comprar bilhetes, em ecrãs até 768px */
+@media only screen and (max-width: 768px) {
+  .buy {
+    padding: 6px 16px; /* Espaçamentos */
+    border-radius: 0px 4px 4px 0px; /* Cantos arredondados */
+    font-size: 14px; /* Tamanho do texto */
+  }
+}
+
+ /* Botão em hover (com o cursor por cima) */
+.buy:hover {
+  background-color: var(--maincolor); /* Cor do fundo */
+  transition-duration: 1s; /* Duração da transição */
+}
+
+/* ---------- PHOTOS ---------- */
+
+.photos {
+  /* As duas margens abaixo obrigam o elemento a ficar centrado */
+  margin-left: auto; /* Margem à esquerda automática */
+  margin-right: auto; /* Margem à direita automática */
+  max-width: 100vh; /* Largura máxima */
+}
+
+ /* Carousel */
+.carousel-inner {
+  border-radius: 16px; /* Cantos das imagens arredondados */
+}
+
+.wallpaper img {
+  width: 100%; /* Largura */
+  border-radius: 16px; /* Cantos arredondados */
+  margin-bottom: 32px;
+}
+
+.wallpaper a {
+  color: var(--cinza5);
+}
+
+.wallpaper a:hover {
+  background-color: transparent;
+  color: var(--maincolor);
+}
+
+/* ---------- VIDEO ---------- */
+
+/* Container do vídeo */
+.video {
+  /* As duas margens abaixo obrigam o elemento a ficar centrado */
+  margin-left: auto; /* Margem à esquerda automática */
+  margin-right: auto; /* Margem à direita automática */
+  position: relative; /* Posição relativa */
+  max-width: 100vh; /* Largura máxima */
+  width: 100%; /* Largura */
+  height: 0; /* Altura */
+  padding-bottom: 56.27198%; /* Padding inferior com este valor obriga o vídeo a ficar proporcional no rácio 16:9 */
+}
+
+ /* Iframe de vídeo embutido do Youtube */
+.video iframe {
+  position: absolute; /* Posição absoluta */
+  border-radius: 16px; /* Cantos arredondados */
+  top: 0; /* Posição em relação ao topo */
+  left: 0; /* Posição em relação à esquerda */
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+}
+
+/* ---------- CONTACT ---------- */
+
+ /* CONTACTOS */
+
+ /* Coluna dos contactos */
+.contactos {
+  text-align: center; /* Texto alinhado ao centro */
+}
+
+ /* Ícones */
+.contact i {
+  margin-bottom: 32px; /* Margem inferior */
+  background-color: var(--maincolor); /* Cor do fundo */
+  padding: 16px; /* Espaçamento */
+  border-radius: 50%; /* Elemento fica arredondado até ficar circular */
+  color: var(--bgcolor); /* Cor do ícone */
+  text-align: center; /* Alinhado ao centro */
+}
+
+ /* Textos */
+.text-contact {
+   /* O conjunto das duas margens abaixo permitem manter os elementos centrados */
+  margin-left: auto; /* Margem esquerda automática */
+  margin-right: auto; /* Margem direita automática */
+  margin-bottom: 48px; /* Margem inferior */
+  text-align: center; /* Texto alinhado ao centro */
+  color: var(--cinza5); /* Cor */
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  font-size: 16px; /* Tamanho do texto */
+}
+
+ /* Texto com link */
+.text-contact a {
+  color: var(--cinza5); /* Cor */
+  text-decoration: none; /* Texto sem decoração (link não fica sublinhado */
+}
+
+ /* Links em hover (com o cursor por cima) */
+.text-contact a:hover {
+  background-color: var(--maincolor); /* Cor do fundo */
+  padding: 4px 8px; /* Espaçamentos */
+  border-radius: 4px; /* Cantos arredondados */
+  color: var(--bgcolor); /* Cor do fundo */
+  transition-duration: 1s; /* Duração do efeito de transição */
+}
+
+/* FORMULÁRIO */
+
+ /* Lista não ordenada */
+.formulario li {
+  color: var(--cinza5); /* Cor */
+  font-size: 16px; /* Tamanho do texto */
+}
+
+.formulario ul {
+  margin-left: -24px; /* Faz recuar todo o conjunto para ficar alinhado com o texto em cima */
+}
+
+ul.list > li {
+  display: inline; /* Mostra os elementos em linha, em vez da forma habitual (cada elemento numa linha diferente) */
+  padding-right: 32px; /* Espaçamento */
+}
+
+ /* Caractere da lista */
+ul.list > li:before {
+  content: "✹"; /* Caractere especial escolhido para anteceder cada elemento da lista */
+  position: relative; /* Posição relativa */
+  font-size: 24px; /* Tamanho do caractere */
+  font-weight: bold; /* Espessura do caractere */
+  top: 2px; /* Distância em relação ao topo */
+  left: -8px; /* Distância em relação à esquerda */
+}
+
+/* CAIXAS DE INPUT DE TEXTO */
+
+ /* Etiqueta que indica os dados a inserir */
+.form-floating {
+  font-family: var(--font); /* Font */
+  font-weight: 500; /* Espessura do texto */
+  color: var(--cinza5); /* Cor */
+}
+
+ /* Etiqueta */
+#floatingInputName,
+#floatingInputEmail,
+#floatingTextarea {
+  background-color: var(--cinza2); /* Cor do fundo */
+  border: 0px; /* Borda */
+  color: var(--cinza5); /* Cor */
+}
+
+ /* Área de texto */
+#floatingTextarea {
+  height: 96px; /* Altura da caixa de texto */
+  resize: none; /* Não permite que o utilizador ajuste o tamanho da caixa de texto */
+}
+
+ /* Form control quando está seleccionado */
+.form-control:focus { /* Texto dentro das caixas */
+  color: var(--cinza5); /* Cor */
+  background-color: var(--cinza3) !important; /* Cor do fundo (com override) */
+  border: 0px !important; /* Borda (com override) */
+}
+
+ /* Texto da etiqueta */
+.form-floating label {
+  color: var(--cinza4) !important; /* Cor (com override) */
+}
+
+ /* Etiqueta (depois) */
+.form-floating label::after {
+  background-color: transparent !important; /* Cor do fundo a transparente */
+}
+
+/* CHECKBOX NEWSLETTER */
+
+ /* Caixa */
+.checkbox-container {
+  margin-top: 16px; /* Margem superior */
+  display: block; /* Exibe o elemento em bloco */
+  position: relative; /* Posição relativa */
+  padding-left: 40px; /* Espaçamento à esquerda */
+  cursor: pointer; /* Tipo de cursor */
+  font-family: var(--font); /* Font */
+  font-weight: 400; /* Espessura da font */
+  font-size: 16px; /* Tamanho do texto */
+  color: var(--cinza3); /* Cor */
+  -webkit-user-select: none; /* Impede que so utilizador seleccione o texto */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Esconder a checkbox original */
+.checkbox-container input {
+  position: absolute; /* Posição absoluta */
+  opacity: 0; /* Opacidade */
+  height: 0; /* Altura */
+  width: 0; /* largura */
+}
+
+/* Checkbox customizada */
+.checkmark {
+  position: absolute; /* Posição absoluta */
+  top: 0; /* Distância em direcção ao topo */
+  left: 0; /* Distância em direcção à esquerda */
+  height: 32px; /* Altura */
+  width: 32px; /* Largura */
+  border-radius: 4px; /* Cantos arredondados */
+  background-color: var(--cinza2); /* Cor do fundo */
+}
+
+/* Comportamento da checkbox em hover (com o cursor por cima) */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var(--cinza3); /* Cor do fundo */
+  transition-duration: 1s; /* Duração do efeito de transição */
+}
+
+/* Fundo da checkbox seleccionada */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--maincolor); /* Cor do fundo */
+}
+
+/* Indicador de checkmark */
+.checkmark:after {
+  content: ""; /* Conteúdo */
+  position: absolute; /* Posição */
+  display: none; /* Não exibe nada */
+}
+
+/* Mostrar checkmark */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block; /* Exibe o caractere de visto */
+}
+
+/* Estilo do caractere check */
+.checkbox-container .checkmark:after {
+  left: 12px; /* Distância em relação à esquerda */
+  top: 6px; /* Distância em relação ao topo */
+  width: 8px; /* Largura */
+  height: 16px; /* Altura */
+  border: solid var(--bgcolor); /* Cor da borda */
+  border-width: 0 4px 4px 0; /* Espessura da borda */
+  -webkit-transform: rotate(45deg); /* Rotação do elemento */
+  -ms-transform: rotate(45deg); /* Rotação do elemento */
+  transform: rotate(45deg); /* Rotação do elemento */
+}
+
+/* BOTÃO DE ENVIO */
+
+ /* Botão */
+.send {
+  float: right; /* Coloca-se à direita */
+  margin-top: 32px; /* Margem superior */
+  background-color: var(--bgcolor); /* Cor do fundo */
+  color: var(--maincolor); /* Cor */
+  padding: 8px 64px; /* Espaçamento */
+  border-radius: 8px; /* Cantos arredondados */
+  font-family: var(--font); /* Font */
+  font-weight: 600; /* Espessura do texto */
+  text-align: center; /* Alinhamento ao centro */
+  text-decoration: none; /* Nenhuma decoração do texto (sem sublinhado) */
+  font-size: 16px; /* Tamanho do texto */
+  border: 2px solid var(--maincolor); /* Bordas do botão: espessura, estilo e cor */
+}
+
+ /* Botão em hover (com o cursor por cima) */
+.send:hover {
+  background-color: var(--maincolor); /* Cor do fundo */
+  color: var(--bgcolor); /* Cor do texto */
+  transition-duration: 1s; /* Duração do efeito de transição */
+}
